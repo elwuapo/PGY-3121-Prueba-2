@@ -17,14 +17,22 @@ API que valida si los datos ingresados ya estan en uso.
 
 POST http://nriverv.pythonanywhere.com/api/v1/validation/all/
 
+formato de la data (body) esperada {"username": username, "email": email, "password1": password1, "password2" password2}
+
 API que realiza la creación del usuario.
 
 POST http://nriverv.pythonanywhere.com/api/v1/signup/
+
+formato de la data (body) esperada {"username": username, "email": email, "password": password}
 
 API que realiza el inicio de sesion.
 
 POST http://nriverv.pythonanywhere.com/api/v1/signin/
 
+formato de la data (body) esperada {"username": username, "password": password}
+
 API que realiza el cierre de sesion.
 
-POST http://nriverv.pythonanywhere.com/
+header {"Authorization": "Token <token obtenido al iniciar sesion o registrarse>"}
+
+POST http://nriverv.pythonanywhere.com/api/v1/signout/all/
